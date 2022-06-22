@@ -1,0 +1,730 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #191A19;
+  overflow-x: hidden;
+}
+body .header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  width: 100%;
+  z-index: 22;
+  color: #fff;
+}
+body .header .wrapper {
+  position: relative;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+body .header .wrapper .logo {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+body .header .wrapper .menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 5px 0;
+}
+body .header .wrapper .menu ul li {
+  list-style: none;
+}
+body .header .wrapper .menu ul li a {
+  font-family: garamond;
+  text-decoration: none;
+  color: #fff;
+}
+body .header .wrapper .menu ul li a h2 {
+  padding: 10px 15px;
+}
+body .header .wrapper .menu ul li:hover {
+  background-color: #1E5128;
+  border-radius: 5px;
+}
+body .header .wrapper .menu ul hr {
+  display: none;
+}
+body .header .wrapper .menu .menu-toggle {
+  display: none;
+}
+body .header .wrapper .menu .menu-toggle .material-icons {
+  transition: all 0.5s ease-in-out;
+}
+body .header .wrapper .menu .menu-toggle .material-icons:hover {
+  border-radius: 5px;
+}
+body .wrapperSticky {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  animation: smoothScroll 1s forwards;
+}
+@keyframes smoothScroll {
+  0% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+body .images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+body .images .wrapper {
+  background-color: lime;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  z-index: 20;
+  height: auto;
+}
+body .images .wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #191A19, transparent);
+  z-index: 5;
+}
+body .images .wrapper img {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  overflow-y: hidden;
+}
+body .images .wrapper .hutan-kanan {
+  z-index: 2;
+  width: 105%;
+  right: 0;
+  bottom: 0;
+}
+body .images .wrapper .hutan-kiri {
+  z-index: 2;
+  left: 0;
+  width: 105%;
+  bottom: 0;
+}
+body .images .wrapper .bg-Images {
+  z-index: 1;
+  width: 100%;
+  bottom: 0;
+}
+body .images .wrapper .object {
+  z-index: 3;
+  width: 100%;
+  bottom: 0;
+}
+body .images .wrapper .desc {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  right: 0;
+  width: 45%;
+  height: 100vh;
+  font-size: 20px;
+}
+body .images .wrapper .desc .wrap-desc {
+  position: relative;
+  width: 88.7%;
+  letter-spacing: 2px;
+}
+body .images .wrapper .desc .wrap-desc h2 {
+  color: #fff;
+}
+body .aboutMe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 14.5em;
+  overflow-x: hidden;
+}
+body .aboutMe .wrapper {
+  width: 70%;
+  display: grid;
+  grid-template-areas: "about skills";
+  gap: 4em;
+  color: white;
+}
+body .aboutMe .wrapper .body-desc {
+  grid-area: about;
+}
+body .aboutMe .wrapper .body-desc .title {
+  font-size: 3.5em;
+  font-weight: bold;
+  letter-spacing: 3px;
+  border-bottom: 5px solid white;
+  width: 5.9em;
+}
+body .aboutMe .wrapper .body-desc .body {
+  padding: 1.5em 0;
+  text-align: justify;
+}
+body .aboutMe .wrapper .body-desc button {
+  font-weight: bold;
+  padding: 12px;
+  border: 1px solid white;
+  background-color: #191A19;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  animation: btnDownload 1.5s infinite;
+}
+@keyframes btnDownload {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+body .aboutMe .wrapper .skills {
+  grid-area: skills;
+}
+body .aboutMe .wrapper .skills h2 {
+  letter-spacing: 3px;
+  border-bottom: 5px solid white;
+  width: 11.9em;
+}
+body .aboutMe .wrapper .skills ul {
+  margin-top: 10px;
+}
+body .aboutMe .wrapper .skills ul li {
+  list-style: none;
+  padding: 1px 0;
+}
+body .project {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 8em;
+}
+body .project .wrapper {
+  width: 70%;
+}
+body .project .wrapper .title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3.5em;
+  color: white;
+  text-align: center;
+}
+body .project .wrapper ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0 25px 0;
+  gap: 25px;
+}
+body .project .wrapper ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  cursor: pointer;
+}
+body .project .wrapper .card-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  gap: 15px;
+  row-gap: 30px;
+}
+body .project .wrapper .card-wrapper .card {
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+body .project .wrapper .card-wrapper .card img {
+  width: 13em;
+  height: 9em;
+  transition: 0.2s ease-in-out;
+  position: relative;
+}
+body .project .wrapper .card-wrapper .card img:hover {
+  transform: translateY(-19%);
+}
+body .project .wrapper .card-wrapper .card #jaki {
+  object-fit: cover;
+}
+body .project .wrapper .card-wrapper .card .desc {
+  padding: 8px 5px;
+  position: absolute;
+  bottom: 0;
+  background-color: black;
+  width: 100%;
+  z-index: -1;
+}
+body .project .wrapper .card-wrapper .hide {
+  display: none;
+}
+body .modal {
+  display: none;
+  position: fixed;
+  z-index: 50;
+  padding-top: 150px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+body .modal .modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+body .modal .caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+body .modal .modal-content, body .modal .caption {
+  animation: 0.6s zoom;
+}
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+body .modal .btnClose {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+body .modal .btnClose:hover, body .modal .btnClose:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+body .education {
+  width: 100%;
+  background-color: #191A19;
+  display: flex;
+  justify-content: center;
+  padding: 7em 0;
+  overflow-x: hidden;
+}
+body .education .wrapper {
+  width: 70%;
+}
+body .education .wrapper .title {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3.5em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+body .education .wrapper .timeline {
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+body .education .wrapper .timeline ul li {
+  background-color: white;
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+body .education .wrapper .timeline ul li:after {
+  content: "";
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+body .education .wrapper .timeline ul li div {
+  border: 1px solid white;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+}
+body .education .wrapper .timeline ul li div:before {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+body .education .wrapper .timeline ul li:nth-child(odd) div {
+  margin-left: 40px;
+}
+body .education .wrapper .timeline ul li:nth-child(odd) div:before {
+  margin-left: 40px;
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent white transparent transparent;
+}
+body .education .wrapper .timeline ul li:nth-child(even) div {
+  transform: translateX(-100%);
+  text-align: right;
+  margin-left: -35px;
+}
+body .education .wrapper .timeline ul li:nth-child(even) div:before {
+  transform: translateX(100%);
+  right: 0;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent white;
+}
+body .education .wrapper .card-body {
+  width: auto;
+  height: 70vh;
+  background-color: blue;
+  color: white;
+  display: grid;
+  grid-template-columns: 40px 3fr;
+  padding-left: 10em;
+}
+body .contact {
+  background-image: url(img/bgFooter.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 2em;
+}
+body .contact .wrapper {
+  width: 70%;
+  color: white;
+  position: relative;
+}
+body .contact .wrapper h1, body .contact .wrapper h4 {
+  text-align: right;
+}
+body .contact .wrapper h1 {
+  padding-bottom: 15px;
+}
+body .contact .wrapper h4 {
+  padding: 5px 0;
+  font-weight: none;
+}
+body .contact .wrapper h4 a {
+  color: white;
+}
+body .contact .wrapper h4 a:hover {
+  color: blue;
+}
+body .contact .wrapper ul {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  bottom: 25px;
+  width: 100%;
+}
+body .contact .wrapper ul li {
+  list-style: none;
+  padding: 5px 20px;
+}
+body .contact .wrapper ul li a {
+  color: black;
+}
+@media screen and (max-width: 1024px) {
+  body .header .wrapper .menu ul {
+    background-color: #191A19;
+    z-index: -1;
+    position: absolute;
+    right: -6%;
+    top: 0;
+    width: 60%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+  }
+  body .header .wrapper .menu ul hr {
+    display: flex;
+    border: 1px solid #1E5128;
+  }
+  body .header .wrapper .menu ul li:nth-child(1) {
+    background-color: #1E5128;
+    border-radius: 5px;
+  }
+  body .header .wrapper .menu .active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  body .header .wrapper .menu .menu-toggle {
+    display: flex;
+    cursor: pointer;
+  }
+  body .header .wrapper .menu .menu-toggle .material-icons {
+    transition: all 0.2s ease-in-out;
+  }
+  body .header .wrapper .menu .menu-toggle .material-icons:hover {
+    border-radius: 5px;
+    color: #1E5128;
+  }
+  body .images {
+    z-index: -2;
+  }
+  body .images .wrapper .desc {
+    font-size: 16px;
+  }
+  body .aboutMe .wrapper {
+    width: 80%;
+    gap: 3em;
+  }
+  body .aboutMe .wrapper .body-desc .title {
+    font-size: 40px;
+    width: 6em;
+  }
+  body .aboutMe .wrapper .body-desc .body {
+    padding: 1.4em 0;
+  }
+  body .aboutMe .wrapper .body-desc button {
+    font-size: 13px;
+    padding: 12px;
+  }
+  body .aboutMe .wrapper .skills h2 {
+    font-size: 22px;
+    width: 7.5em;
+  }
+  body .aboutMe .wrapper .skills ul {
+    margin-top: 10px;
+  }
+  body .aboutMe .wrapper .skills ul li {
+    padding: 1px 0;
+  }
+  body .project .wrapper {
+    width: 80%;
+  }
+  body .project .wrapper .title {
+    font-size: 40px;
+  }
+  body .modal > .modal-content {
+    width: 100%;
+  }
+  body .education .wrapper {
+    width: 80%;
+  }
+  body .education .wrapper .title {
+    font-size: 40px;
+  }
+  body .education .wrapper .timeline ul li {
+    width: 4px;
+    padding-top: 20px;
+  }
+  body .education .wrapper .timeline ul li:after {
+    width: 25px;
+    height: 25px;
+  }
+  body .education .wrapper .timeline ul li div {
+    width: 330px;
+  }
+  body .contact .wrapper {
+    width: 80%;
+  }
+  body .contact .wrapper ul li {
+    padding: 5px 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .header .wrapper .logo {
+    font-size: 15px;
+  }
+  body .header .wrapper .menu ul {
+    width: 80%;
+  }
+  body .header .wrapper .menu ul li > a {
+    font-size: 15px;
+  }
+  body .header .wrapper .menu .menu-toggle .material-icons {
+    font-size: 30px;
+  }
+  body .images .wrapper .desc {
+    font-size: 10px;
+  }
+  body .aboutMe .wrapper {
+    width: 95%;
+    gap: 2em;
+  }
+  body .aboutMe .wrapper .body-desc .title {
+    font-size: 35px;
+    width: 6.1em;
+  }
+  body .aboutMe .wrapper .body-desc button {
+    font-size: 11px;
+  }
+  body .aboutMe .wrapper .skills h2 {
+    font-size: 20px;
+    width: 7.5em;
+  }
+  body .aboutMe .wrapper .skills ul {
+    margin-top: 10px;
+  }
+  body .project .wrapper {
+    width: 95%;
+  }
+  body .project .wrapper .title {
+    font-size: 35px;
+  }
+  body .project .wrapper .card-wrapper {
+    gap: 15px;
+    row-gap: 30px;
+  }
+  body .project .wrapper .card-wrapper .card img {
+    width: 10em;
+    height: 7em;
+  }
+  body .modal .modal.content {
+    width: 100%;
+  }
+  body .education .wrapper {
+    width: 95%;
+  }
+  body .education .wrapper .timeline ul li {
+    width: 2px;
+  }
+  body .education .wrapper .timeline ul li:after {
+    width: 20px;
+    height: 20px;
+  }
+  body .education .wrapper .timeline ul li div {
+    width: 250px;
+  }
+  body .education .wrapper .timeline ul li div time {
+    font-size: 16PX;
+  }
+  body .education .wrapper .timeline ul li div h4 {
+    font-size: 12px;
+  }
+  body .contact .wrapper {
+    width: 95%;
+  }
+  body .contact .wrapper h1 {
+    font-size: 22px;
+  }
+  body .contact .wrapper ul li h3 {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 586px) {
+  body .header .wrapper .menu ul {
+    width: 112%;
+  }
+  body .aboutMe .wrapper {
+    width: 95%;
+    gap: 2em;
+    grid-template-areas: "about about" "skills skills";
+  }
+  body .aboutMe .wrapper .body-desc {
+    text-align: center;
+  }
+  body .aboutMe .wrapper .body-desc .title {
+    font-size: 24px;
+    width: 6.4em;
+  }
+  body .aboutMe .wrapper .body-desc button {
+    font-size: 11px;
+  }
+  body .aboutMe .wrapper .skills {
+    text-align: center;
+    padding-top: 4em;
+  }
+  body .aboutMe .wrapper .skills h2 {
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    font-size: 23px;
+  }
+  body .aboutMe .wrapper .skills ul {
+    margin-top: 20px;
+  }
+  body .project .wrapper .title {
+    font-size: 30px;
+  }
+  body .project .wrapper ul li {
+    font-size: 12px;
+  }
+  body .project .wrapper ul li img {
+    width: 15px;
+  }
+  body .project .wrapper .card-wrapper {
+    gap: 10px;
+    row-gap: 25px;
+  }
+  body .education .wrapper .title {
+    font-size: 30px;
+  }
+  body .education .wrapper .timeline ul li:after {
+    width: 15px;
+    height: 15px;
+  }
+  body .education .wrapper .timeline ul li div {
+    width: 120px;
+    padding: 5px;
+  }
+  body .education .wrapper .timeline ul li div time {
+    font-size: 16px;
+  }
+  body .education .wrapper .timeline ul li div h4 {
+    font-size: 12px;
+  }
+  body .contact .wrapper h1 {
+    font-size: 18px;
+  }
+  body .contact .wrapper h4 {
+    font-size: 12px;
+  }
+  body .contact .wrapper ul li h3 {
+    font-size: 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

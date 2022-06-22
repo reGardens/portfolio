@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="wrapper">
+        <h1>Portfolio</h1>
+        <div class="menu">
+          <ul>
+            <li><a href=""><h2>Home</h2></a></li>
+            <hr />
+            <li><a href="#aboutMe"><h2>About Me</h2></a></li>
+            <hr />
+            <li><a href="#aboutMe"><h2>Skills</h2></a></li>
+            <hr />
+            <li><a href="#project"><h2>Projects</h2></a></li>
+            <hr />
+            <li><a href="#education"><h2>Education</h2></a></li>
+            <hr />
+            <li><a href="#contact"><h2>Contact</h2></a></li>
+            <hr />
+          </ul>
+
+          <div class="menu-toggle">
+            <span class="material-icons">menu</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="images">
+      <div class="wrapper">
+        <img
+          src="img/hutan-kanan.png"
+          class="layer hutan-kanan"
+          data-speeed="1"
+          alt=""
+        />
+        <img
+          src="img/hutan-kiri.png"
+          class="layer hutan-kiri"
+          data-speeed="-5"
+          alt=""
+        />
+        <img src="img/bg-Images.png" class="bg-Images" alt="" />
+        <img src="img/object.png" class="layer object" ata-speed="32" alt="" />
+
+        <div class="desc">
+          <div class="wrap-desc">
+            <h2>HELLO</h2>
+            <h2>I AM</h2>
+            <h2>REZA BAGUS PRATAMA</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="aboutMe" id="aboutMe">
+      <div class="wrapper">
+        <div class="body-desc">
+          <div class="title">ABOUT ME</div>
+          <div class="body">
+            <h4>
+              My name is Reza Bagus Pratama 24 years old from Indonesia, Central Java, I am an IT frontend web
+              developer with 2 years experience as a freelance developer, I want
+              to bring my work experience towards a fullstack web developer, have
+              made several projects such as asset management system applications
+              and POS point of sales and other small-scale applications. <br> <br>
+              Apart from being a web developer im also a competitive programmer and a tech enthusiast.
+
+            </h4>
+          </div>
+          <a href="#">
+            <button type="submit" class="handleBtnDownload"><h3>DONWLOAD MY RESUME</h3></button>
+          </a>
+        </div>
+        <div class="skills">
+          <h2>TECHNICAL SKILLS</h2>
+          <ul>
+            <li><h4>Googling & Problem Solving</h4></li>
+            <li><h4>HTML & CSS</h4></li>
+            <li><h4>Javascript</h4></li>
+            <li><h4>PHP</h4></li>
+            <li><h4>Bootstrap</h4></li>
+            <li><h4>SASS/SCSS</h4></li>
+            <li><h4>React.Js</h4></li>
+            <li><h4>Node.Js</h4></li>
+            <li><h4>Express.Js</h4></li>
+            <li><h4>MYSQL</h4></li>
+            <li><h4>Firebase</h4></li>
+            <li><h4>Codeigniter</h4></li>
+            <li><h4>GIT</h4></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="project" id="project">
+      <div class="wrapper">
+        <div class="title">PROJECTS</div>
+        <ul>
+          <li><h5>PROJECT CATEGORIES</h5></li>
+          <li class="list active" data-filter="all"><img src="img/icons/002-grid.png" alt="" sizes="" srcset=""> ALL</li>
+          <li class="list" data-filter="certificate"><img src="img/icons/001-certificate.png" alt="" srcset=""> CERTIFICATE</li>
+          <li class="list" data-filter="website"><img src="/img/icons/003-imac.png" alt="" srcset=""> WEBSITES</li>
+          <li class="list" data-filter="other"><img src="img/icons/004-more.png" alt="" srcset=""> OTHER</li>
+        </ul>
+        <div class="card-wrapper">
+          <!-- websites -->
+          <div class="card" data-items="website">
+            <img class="image" src="/img/modernPOS.png" alt="Modern Pos is a website that our team is working on for client needs for the beverage business" srcset="">
+            <div class="desc"><h6>MODERN POS</h6></div>
+          </div>
+          <div class="card" data-items="website">
+            <img class="image" src="/img/ams.jpg" alt="The Asset Management System is a website that I buy and then changed with our team according to the needs of the office" srcset="">
+            <div class="desc"><h6>ASSET MANAGEMENT SYSTEM</h6></div>
+          </div>
+          <div class="card" data-items="website">
+            <img class="image" src="/img/CompanyProfile.png" alt="is a single page website that I made for learning and the pictures I took from the design examples on the pinterest website" srcset="">
+            <div class="desc"><h6>COMPANY PROFILE</h6></div>
+          </div>
+          <div class="card" data-items="website">
+            <img class="image" src="/img/managementSiswa.png" alt="Student Management is a website to handle every student" srcset="">
+            <div class="desc"><h6>MANAGEMENT SISWA</h6></div>
+          </div>
+          <div class="card" data-items="website">
+            <img class="image" src="/img/reStore.png" alt="is an open source that I took for the needs of college assignments" srcset="">
+            <div class="desc"><h6>REZA STORE</h6></div>
+          </div>
+          <div class="card" data-items="website">
+            <img class="image" src="/img/travelPackage.png" alt="This website is made for Travel Packages in Jogja" srcset="">
+            <div class="desc"><h6>TRAVEL PACKAGE JOGJA</h6></div>
+          </div>
+          <!-- certificate -->
+          <div class="card" data-items="certificate">
+            <img class="image" src="/img/thumb/ECC-Evaluation-Certificate.jpg" alt="I received this certificate after completing my training from EC Council" srcset="">
+            <div class="desc"><h6>EC COUNCIL</h6></div>
+          </div>
+          <div class="card" data-items="certificate">
+            <img class="image" src="/img/thumb/HTML_certificate.jpg" alt="I received this certificate after completing the HTML Fundamental Course challenge from SOLOLEARN" srcset="">
+            <div class="desc"><h6>HTML BY SOLOLEARN</h6></div>
+          </div>
+          <div class="card" data-items="certificate">
+            <img class="image" src="/img/thumb/VSGA-0001.jpg" alt="I received this certificate after completing the Kominfo Digital Talent Scholarship Cluster Vocational School Graduate Academy" srcset="">
+            <div class="desc"><h6>VSGA BY KOMINFO</h6></div>
+          </div>
+          <div class="card" data-items="certificate">
+            <img class="image" src="/img/thumb/LSP.png" alt="I got this certificate after completing basic coding from Lembaga Sertifikasi Profesi" srcset="">
+            <div class="desc"><h6>LEMBAGA SERTIFIKASI PROFESI</h6></div>
+          </div>
+          <div class="card" data-items="certificate">
+            <img class="image" src="/img/thumb/unpam - AI.png" alt="I got this certificate after attending an Artificial Intelligence seminar from Pamulang University" srcset="">
+            <div class="desc"><h6>AI BY UNPAM</h6></div>
+          </div>
+          <div class="card" data-items="certificate">
+            <img class="image" src="/img/thumb/unpam - cyber forensic.png" alt="I got this certificate after attending an Cyber Forensics seminar from Pamulang University" srcset="">
+            <div class="desc"><h6>CYBER FORENCICS BY UNPAM</h6></div>
+          </div>
+          <!-- other -->
+          <div class="card" data-items="other">
+            <img class="image" src="/img/thumb/bannerLaundryAdit.jpg" alt="A project from a friend who asked to make a banner for his business" srcset="">
+            <div class="desc"><h6>BANNER LAUNDRY</h6></div>
+          </div>
+          <div class="card" data-items="other">
+            <img class="image" id="jaki" src="/img/thumb/Jaki Aplikasi.png" alt="The prototype of the Jaki App was made using the JustInMind application" srcset="">
+            <div class="desc"><h6>JAKI APPLICATION PROTOTYPE</h6></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Image Galery -->
+    <div class="modal" id="myModal">
+      <span class="btnClose">X</span>
+      <img class="modal-content" id="img01">
+      <div class="caption">Ini modal</div>
+    </div>
+    
+    <div class="education" id="education">
+      <div class="wrapper">
+        <div class="title">Education</div>
+        <div class="timeline">
+          <ul>
+            <li>
+              <div>
+                <time><h3>2003 - 2009</h3></time>
+                <h4>SDN 09 GROGOL PETAMBURAN</h4>
+              </div>
+            </li>
+            <li>
+              <div>
+                <time><h3>2009 - 2012</h3></time>
+                <h4>SMPN 274 JAKARTA BARAT</h4>
+              </div>
+            </li>
+            <li>
+              <div>
+                <time><h3>2012 - 2015</h3></time>
+                <h4>SMK ASSA'ADATUL ABADIYAH</h4>
+              </div>
+            </li>
+            <li>
+              <div>
+                <time><h3>2015 - 2021</h3></time>
+                <h4>UNIVERSITAS PAMULANG</h4>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact" id="contact">
+      <div class="wrapper">
+        <h1>LET'S TALK ABOUT EVERYTHING WITH ME :)</h1>
+        <h4>Don't Like Forms ?&nbsp; Give me feedback !&nbsp;<a href="">Here</a></h4>
+        <h4>Designed by <a href="">Reza Bagus Pratama</a></h4>
+
+        <ul>
+          <li class="facebook"><a href="#"><h3>FACEBOOK</h3></a></li>
+          <li class="instagram"><a href="#"><h3>INSTAGRAM</h3></a></li>
+          <li class="github"><a href="#"><h3>GITHUB</h3></a></li>
+          <li class="linkedin"><a href="#"><h3>LINKEDIN</h3></a></li>
+          <li class="whatsapp"><a href="#"><h3>WHATSAPP</h3></a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="dummy">p</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
