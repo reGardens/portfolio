@@ -80,11 +80,11 @@ const img = document.querySelectorAll('.image')
 const desc = document.querySelector('.card .desc1');
 const modalImg = document.getElementById("img01")
 const captionText = document.querySelector('.caption')
-const spanX = document.querySelector('.btnClose')
+const spanX = document.querySelector('.wrapper .btnClose')
 
 for (let i = 0; i < img.length; i++) {
     img[i].addEventListener('click', (e) => {
-        modal.style.display = "block";
+        modal.style.display = "flex";
         modalImg.src = e.target.src;
         captionText.innerHTML = e.target.alt;
     })

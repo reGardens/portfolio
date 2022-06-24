@@ -2,7 +2,12 @@ $bgColor : #191A19;
 $menuColor : #1E5128;
 $font : garamond;
 $bigFont : 3.5em;
-
+$h1 : 24px;
+$h2 : 22px;
+$h3 : 18px;
+$h4 : 16px;
+$h5 : 12px;
+$h6 : 10px;
 * {
     padding: 0;
     margin: 0;
@@ -13,64 +18,46 @@ $bigFont : 3.5em;
 body {
     background-color: $bgColor;
     overflow-x: hidden;
+    font-family: $font;
     .header {
         position: relative;
         display: flex;
         justify-content: center;
-        top: 0;
         width: 100%;
-        // height: 3.6em;
         z-index: 22;
-        // font-size: 20px;
         color: #fff;
-        // background-color: red;
-        // overflow-x: hidden;
         .wrapper {
-            // overflow-x: hidden;
             position: relative;
-            // height: 100%;
-            width: 90%;
-            // height: 3.6em;
+            width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             transition: all 0.2s ease-in-out;
-            // background-color: yellow;
+            margin: 5px 0;
             .logo { text-transform: uppercase; font-weight: bold;}
             .menu {
-                // display: flex;
-                // align-items: center;
                 ul {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     gap: 5px;
-                    margin: 5px 0;
                     li {
-                        // background-color: green;
-                        // display: flex;
                         list-style: none;
                         a {
-                            // background-color: red;
-                            font-family: $font;
                             text-decoration: none;
-                            // text-transform: uppercase;
                             color: #fff;
-                            h2 { padding: 10px 15px; }
+                            h3 { padding: 10px 15px; }
                         }
                         &:hover {
                             background-color: $menuColor;
                             border-radius: 5px;  
                         }
                     }
-                    hr { display: none; }
                 }
                 
                 .menu-toggle {
                     display: none;
                     .material-icons {
-                        // font-size: 40px;
-                        // padding: 10px 15px;
                         transition: all 0.5s ease-in-out;
                         &:hover { border-radius: 5px; }    
                     }
@@ -89,22 +76,22 @@ body {
     }
     
     .images {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
         position: relative;
+        // background-size: cover;
         width: 100%;
         height: 80vh;
         overflow: hidden;
-        // margin-top: 2.3em;
         .wrapper {
-            background-color: lime;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-            background-color: green;
-            z-index: 20;
-            height: auto;
+            // background-color: lime;
+            // width: 100%;
+            // justify-content: center;
+            // align-items: center;
+            // background-color: green;
+            // z-index: 20;
+            // height: auto;
             &::before {
                 content: '';
                 position: absolute;
@@ -112,14 +99,14 @@ body {
                 width: 100%;
                 height: 100%;
                 background: linear-gradient(to top, $bgColor, transparent);
-                // background: rgba(blue, 0.5);
                 z-index: 5;
             }
             img {
-                display: flex;
+                // display: flex;
                 position: absolute;
+                // transform: translateX(-50%);
                 height: 100%;
-                overflow-y: hidden;
+                overflow: hidden;
 
             }
             .hutan-kanan {
@@ -152,11 +139,10 @@ body {
                 right: 0;
                 width: 45%;
                 height: 100vh;
-                font-size: 20px;
                 .wrap-desc {
                     position: relative;
                     width: 88.7%;
-                    h2 { color: #fff; }
+                    h1 { color: #fff; }
                     letter-spacing: 2px;
                 }
             }
@@ -165,10 +151,10 @@ body {
 
     .aboutMe {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         width: 100%;
-        padding-top: 14.5em;
+        padding-top: 17em;
         overflow-x: hidden;
         .wrapper {
             width: 70%;
@@ -179,21 +165,27 @@ body {
             color: white;
             .body-desc {
                 grid-area: about;
-                .title {
+                h1 {
                     font-size: $bigFont;
-                    font-weight: bold;
-                    letter-spacing: 3px;
-                    border-bottom: 5px solid white;
-                    width: 5.9em;
+                    // letter-spacing: 3px;
                 }
+                // .title {
+                //     font-size: $bigFont;
+                //     font-weight: bold;
+                //     // border-bottom: 5px solid white;
+                //     width: 5.9em;
+                // }
                 .body {
                     padding: 1.5em 0;
-                    text-align: justify;
+                    h3 {
+                        text-align: justify;
+                        font-weight: normal;
+                    }
                 }
                 button {
-                    // font-size: 15px;
                     font-weight: bold;
                     padding: 12px;
+                    margin-top: 1em;
                     border: 1px solid white;
                     background-color: $bgColor;
                     color: white;
@@ -210,15 +202,18 @@ body {
             .skills {
                 grid-area: skills;
                 h2 {
-                    letter-spacing: 3px;
-                    border-bottom: 5px solid white;
+                    // letter-spacing: 3px;
+                    // border-bottom: 5px solid white;
                     width: 11.9em;
                 }
                 ul {
-                    margin-top: 10px;
+                    margin-top: 1.4em;
                     li {
                         list-style: none;
                         padding: 1px 0;
+                        h4 {
+                            font-weight: normal;
+                        }
                     }
                 }
             }
@@ -229,7 +224,7 @@ body {
         display: flex;
         justify-content: center;
         width: 100%;
-        padding-top: 8em;
+        padding-top: 13em;
         .wrapper {
             width: 70%;
             .title {
@@ -258,6 +253,7 @@ body {
                 }
             }
             .card-wrapper {
+                margin-top: 1.4em;
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
@@ -295,9 +291,10 @@ body {
 
     .modal {
         display: none;
+        justify-content: center;
+        align-items: center;
         position: fixed;
         z-index: 50;
-        padding-top: 150px;
         left: 0;
         top: 0;
         width: 100%;
@@ -305,43 +302,40 @@ body {
         overflow: auto;
         background-color: rgb(0, 0, 0);
         background-color: rgba(0, 0, 0, 0.9);
-        .modal-content {
-            margin: auto;
-            display: block;
-            
-            width: 80%;
-            max-width: 700px;
-        }
-        .caption {
-            margin: auto;
+        .wrapper {
             display: block;
             width: 80%;
-            max-width: 700px;
-            text-align: center;
-            color: #ccc;
-            padding: 10px 0;
-            height: 150px;
-        }
-        // animasi
-        .modal-content, .caption {
-            animation: 0.6s zoom;
-        }
-        @keyframes zoom {
-            from { transform: scale(0); }
-            to { transform: scale(1); }
-        }
-        .btnClose {
-            position: absolute;
-            top: 35px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-            &:hover, &:focus {
-                color: #bbb;
-                text-decoration: none;
-                cursor: pointer;
+            .modal-content {
+                width: 100%;
+                height: 70%;
+            }
+            .caption {
+                text-align: center;
+                color: #ccc;
+                padding: 10px 0;
+            }
+            // animasi
+            .modal-content, .caption {
+                animation: 0.6s zoom;
+            }
+            @keyframes zoom {
+                from { transform: scale(0); }
+                to { transform: scale(1); }
+            }
+        
+            .btnClose {
+                position: absolute;
+                top: 35px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.3s;
+                &:hover, &:focus {
+                    color: #bbb;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -351,7 +345,8 @@ body {
         background-color: $bgColor;
         display: flex;
         justify-content: center;
-        padding: 7em 0;
+        margin-top: 8em;
+        padding-top: 6em;
         overflow-x: hidden;
         .wrapper {
             width: 70%;
@@ -361,13 +356,12 @@ body {
                 font-weight: bold;
                 font-size: $bigFont;
                 text-align: center;
-                margin-bottom: 1em;
+                margin-bottom: 0.8em;
             }
             .timeline {
                 color: white;
                 display: flex;
                 justify-content: center;
-                padding-bottom: 50px;
                 ul {
                     li {
                         background-color: white;
@@ -388,7 +382,7 @@ body {
                             border-radius: 50%;
                         }
                         div {
-                            border: 1px solid white;
+                            border: 1px solid #b1aeae;
                             bottom: 0;
                             width: 400px;
                             padding: 15px;
@@ -400,10 +394,7 @@ body {
                                 height: 0;
                                 border-style: solid;
                             }
-                            // time {
-                            // //     // font-weight: bold;
-                            // //     // font-size: 22px;
-                            // }
+                            h4 { font-weight: normal; }
                         }
 
                         // element ganjil
@@ -420,7 +411,6 @@ body {
                         // element genap 
                         &:nth-child(even) div {
                             transform: translateX(-100%);
-                            // left: 0;
                             text-align: right;
                             margin-left: -35px;
                         }
@@ -434,15 +424,6 @@ body {
                     }
                 }
             }
-            .card-body {
-                width: auto;
-                height: 70vh;
-                background-color: blue;
-                color: white;
-                display: grid;
-                grid-template-columns: 40px 3fr;
-                padding-left: 10em;
-            }
         }
     }
 
@@ -455,18 +436,15 @@ body {
         height: 50vh;
         display: flex;
         justify-content: center;
-        padding-top: 2em;
+        margin-top: 16em;
+        // padding-top: 2em;
         .wrapper {
             width: 70%;
             color: white;
             position: relative;
-            h1, h4 {
-                text-align: right;
-            }
-            h1 {
-                padding-bottom: 15px;
-            }
-            h4 {
+            h1, h4 { text-align: right; }
+            h1 { padding-bottom: 15px; }
+            h4 { 
                 padding: 5px 0;
                 font-weight: none;
                 a { color: white;
@@ -479,12 +457,8 @@ body {
                 position: absolute;
                 display: flex;
                 flex-wrap: wrap;
-                // background-color: red;
-                // margin-top: 2em;
                 bottom: 25px;
                 width: 100%;
-                // height: 6em;
-                // align-items: flex-start;
                 li {
                     list-style: none;
                     padding: 5px 20px;
@@ -496,46 +470,40 @@ body {
         }
     }
 
-    // .dummy {
-    //     height: 30vh;
-    //     background-color: #c0c0c0;
-    // }
-    
+
     // responsive
     // breakpoiint 1024px
     @media screen and (max-width: 1024px) {
         .header {
             .wrapper {
+                justify-content: space-between;
+                width: 80%;
                 .menu {
-                    // revisi disini sidebar menu
+                    display: flex;
+                    position: relative;
+                    // right: -16px;
+                    // padding-right: 1em;
                     ul {
                         background-color: $bgColor;
                         z-index: -1;
-                        position: absolute;
-                        right: -6%;
+                        position: fixed;
+                        right: 0;
                         top: 0;
-                        width: 60%;
+                        width: 25em;
                         height: 100vh;
                         padding: 0;
                         margin: 0;
                         flex-direction: column;
                         justify-content: center;
-                        // padding: 5em 1em 0 0;
                         align-items: center;
-                        transform: translateX(100%);
                         transition: all 0.4s ease-in-out;
                         opacity: 0;
-                        // text-align: right;
-                        hr {
-                            display: flex;
-                            // width: 50%;
-                            border: 1px solid $menuColor;
-                        }
                         li {
                             &:nth-child(1) { 
-                                background-color: $menuColor;
-                                border-radius: 5px;
-                            }    
+                                    background-color: $menuColor;
+                                    border-radius: 5px;
+                                    
+                                }    
                         }
                     }
                     
@@ -550,31 +518,20 @@ body {
                         cursor: pointer;
                         .material-icons {
                             transition: all 0.2s ease-in-out;
-                            &:hover {
-                                border-radius: 5px;
-                                color: $menuColor;
-                            }
+                            &:hover { border-radius: 5px; }
                         }
                     }
-                }
-            }
-        }
-        .images {
-            z-index: -2;
-            .wrapper {
-                .desc {
-                    font-size: 16px;
                 }
             }
         }
         .aboutMe {
             .wrapper {
                 width: 80%;
-                gap: 3em;
+                // gap: 3em;
                 .body-desc {
-                    .title {
+                    h1 {
                         font-size: 40px;
-                        width: 6em;
+                        // width: 6em;
                     }
                     .body { padding: 1.4em 0; }
                     button {
@@ -587,10 +544,10 @@ body {
                         font-size: 22px;
                         width: 7.5em;
                     }
-                    ul {
-                        margin-top: 10px;
-                        li { padding: 1px 0; }
-                    }
+                    // ul {
+                    //     // margin-top: 10px;
+                    //     // li { padding: 1px 0; }
+                    // }
                 }    
             }
         }
@@ -650,45 +607,26 @@ body {
 
     // breakpoiint 768px
     @media screen and (max-width: 768px) {
-        .header {
-            .wrapper {
-                // width: ;
-                .logo { font-size: 15px; }
-                .menu {
-                    ul {
-                        width: 80%;
-                        li > a { font-size: 15px; }
-                    }
-                    .menu-toggle {
-                        .material-icons { font-size: 30px; }    
-                    }
-                }
-            }
-        }
-        .images {
-            .wrapper {
-                .desc { font-size: 10px; }
-            }
-        }
         .aboutMe {
+            text-align: center;
             .wrapper {
                 width: 95%;
                 gap: 2em;
+                grid-template-areas: 
+                'about'
+                'skills'
+                ;
                 .body-desc {
-                    .title {
-                        font-size: 35px;
-                        width: 6.1em;
-                    }
                     button { font-size: 11px; }    
                 }
                 .skills {
+                    margin-top: 3em;
                     h2 {
-                        font-size: 20px;
-                        width: 7.5em;
+                        font-size: calc($h1 + 6px);
+                        width: 100%;
+                        // text-align: center;
                     }
-                    ul {
-                        margin-top: 10px;
-                    }
+                    // ul { margin-top: 1.4em; }
                 }    
             }
         }
@@ -716,9 +654,6 @@ body {
         .education {
             .wrapper {
                 width: 95%;
-                .title {
-                    // font-size: 15px;
-                }
                 .timeline {
                     ul {
                         li {
@@ -748,9 +683,7 @@ body {
         .contact {
             .wrapper {
                 width: 95%;
-                h1 {
-                    font-size: 22px;
-                }
+                h1 { font-size: 22px; }
                 ul {
                     li {
                         h3 {
@@ -765,47 +698,41 @@ body {
     @media screen and (max-width: 586px) {
         .header {
             .wrapper {
-                // width: ;
-                // .logo { font-size: 15px; }
                 .menu {
                     ul {
-                        width: 112%;
-                        // li > a { font-size: 15px; }
+                        width: 100%;
                     }
-                    // .menu-toggle {
-                    //     .material-icons { font-size: 30px; }    
-                    // }
                 }
+            }
+        }
+        .images {
+            .wrapper {
+                .desc { font-size: $h5; }
             }
         }
         .aboutMe {
             .wrapper {
                 width: 95%;
-                gap: 2em;
-                grid-template-areas: 
-                'about about'
-                'skills skills'
-                ;
+                // gap: 2em;
                 .body-desc {
-                    .title {
-                        font-size: 24px;
-                        width: 6.4em;
-                    }
+                    // .title {
+                    //     // font-size: 24px;
+                    //     // width: 6.4em;
+                    // }
                     button {
-                        font-size: 11px; 
+                        // font-size: 11px; 
                     }  
-                    text-align: center;
                 }
                 .skills {
-                    text-align: center;
-                    padding-top: 4em;                                    
+                    // text-align: center;
+                    // padding-top: 4em;                                    
                     h2 {
-                        font-size: 20px;
+                        // font-size: 20px;
                         width: 100%;
-                        border: none;
-                        font-size: 23px;
+                        // border: none;
+                        // font-size: 23px;
                     }
-                    ul { margin-top: 20px; }
+                    // ul { margin-top: 20px; }
                 }    
             }
         }
