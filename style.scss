@@ -487,6 +487,10 @@ header {
             }
         }
     }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 #experience {
@@ -839,8 +843,9 @@ header {
 
     #myModal {
         .container {
+            width: unset;
             .img-content {
-                height: 30%;
+                height: 12rem;
                 margin-top: 3rem;
             }
 

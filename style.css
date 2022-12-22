@@ -417,6 +417,9 @@ header .groot img {
   outline: none;
   margin-bottom: 1.5rem;
 }
+#myModal::-webkit-scrollbar {
+  display: none;
+}
 
 #experience {
   background-color: rgb(50, 50, 51);
@@ -685,8 +688,11 @@ header .groot img {
     width: 100%;
     height: 100%;
   }
+  #myModal .container {
+    width: unset;
+  }
   #myModal .container .img-content {
-    height: 30%;
+    height: 12rem;
     margin-top: 3rem;
   }
   #myModal .container .caption {
