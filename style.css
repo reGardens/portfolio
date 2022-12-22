@@ -196,7 +196,6 @@ header .groot img {
   display: flex;
   background-color: #D9D9D9;
   color: #ffffff;
-  padding: 2rem;
 }
 #about .card .img {
   width: 90rem;
@@ -303,7 +302,7 @@ header .groot img {
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 0;
+  top: 0;
 }
 #project .card-wrapper .card #jaki {
   object-fit: cover;
@@ -456,6 +455,7 @@ header .groot img {
   font-weight: bold;
   line-height: 1.45rem;
   padding: 10px 20px;
+  min-height: 10rem;
 }
 #experience .container .card-wrapper .card .desc .title {
   font-size: 1.125rem;
@@ -468,9 +468,13 @@ header .groot img {
   font-size: 0.75rem;
 }
 #experience .container .card-wrapper .card .desc .btn {
+  position: absolute;
+  left: 0;
+  bottom: 15px;
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  align-items: center;
+  width: 100%;
 }
 #experience .container .card-wrapper .card .desc .btn a {
   padding: 8px 10px;
@@ -591,6 +595,7 @@ header .groot img {
   }
   .nav {
     background-color: unset;
+    bottom: 10.5px;
   }
   .nav .container ul {
     padding: 0.7rem 0;
@@ -602,12 +607,11 @@ header .groot img {
     list-style: none;
     display: grid;
     align-items: center;
-    width: 3.6rem;
   }
   .nav .container ul li a {
     background-color: rgb(50, 50, 51);
     font-size: 0.75rem;
-    padding: 0.3rem;
+    padding: 0.3rem 1rem;
     text-align: center;
   }
   .nav .container ul li a span {
@@ -625,9 +629,6 @@ header .groot img {
   #about {
     padding: 2.5rem 0;
   }
-  #about .container {
-    padding: unset;
-  }
   #about .container p {
     text-align: center;
     height: unset;
@@ -635,7 +636,6 @@ header .groot img {
   #about .container .card {
     flex-direction: column;
     border-radius: unset;
-    padding: 1rem;
     background-color: unset;
   }
   #about .container .card .img {
@@ -650,6 +650,7 @@ header .groot img {
   }
   #about .container .card .desc p {
     text-align: justify;
+    padding: 1rem;
   }
   #skill {
     padding: 2.5rem 0;
@@ -676,6 +677,14 @@ header .groot img {
     height: 6rem;
     border-radius: 5px;
     box-shadow: unset;
+  }
+  #project .card-wrapper .card img {
+    display: none;
+  }
+  #project .card-wrapper .card .text-behind {
+    padding: 5px;
+    font-size: 0.875rem;
+    height: 100%;
   }
   #myModal .container .img-content {
     height: 30%;
@@ -714,6 +723,9 @@ header .groot img {
   }
   #experience .container .card-wrapper .card .desc .title {
     font-size: 1rem;
+  }
+  #experience .container .card-wrapper .card .desc .btn a {
+    width: 8rem;
   }
 }
 

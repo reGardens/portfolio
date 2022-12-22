@@ -227,7 +227,6 @@ header {
         display: flex;
         background-color: #D9D9D9;
         color: #ffffff;
-        padding: 2rem;
 
         .img {
             width: 90rem;
@@ -349,7 +348,7 @@ header {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                bottom: 0;
+                top: 0;
             }
 
             #jaki {
@@ -529,6 +528,7 @@ header {
                     font-weight: bold;
                     line-height: 1.45rem;
                     padding: 10px 20px;
+                     min-height: 10rem;
 
                     .title {
                         font-size: 1.125rem;
@@ -544,9 +544,13 @@ header {
                     }
 
                     .btn {
+                        position: absolute;
+                        left: 0;
+                        bottom: 15px;
                         display: flex;
                         justify-content: center;
-                        margin-top: 1rem;
+                        align-items: center;
+                        width: 100%;
 
                         a {
                             padding: 8px 10px;
@@ -713,6 +717,7 @@ header {
 
     .nav {
         background-color: unset;
+        bottom: 10.5px;
 
         .container {
             ul {
@@ -725,12 +730,11 @@ header {
                     list-style: none;
                     display: grid;
                     align-items: center;
-                    width: 3.6rem;
 
                     a {
                         background-color: $bgColor;
                         font-size: 0.75rem;
-                        padding: 0.3rem;
+                        padding: 0.3rem 1rem;
                         text-align: center;
 
                         span {
@@ -757,8 +761,6 @@ header {
         padding: 2.5rem 0;
 
         .container {
-            padding: unset;
-
             p {
                 text-align: center;
                 height: unset;
@@ -767,7 +769,6 @@ header {
             .card {
                 flex-direction: column;
                 border-radius: unset;
-                padding: 1rem;
                 background-color: unset;
 
                 .img {
@@ -783,6 +784,7 @@ header {
 
                     p {
                         text-align: justify;
+                        padding: 1rem;
                     }
                 }
             }
@@ -820,6 +822,16 @@ header {
                 height: 6rem;
                 border-radius: 5px;
                 box-shadow: unset;
+
+                img {
+                    display: none;
+                }
+
+                .text-behind {
+                    padding: 5px;
+                    font-size: 0.875rem;
+                    height: 100%;
+                }
             }
         }
     }
@@ -875,6 +887,12 @@ header {
 
                         .title {
                             font-size: 1rem;
+                        }
+
+                        .btn {
+                            a {
+                                width: 8rem;
+                            }
                         }
                     }
                 }
