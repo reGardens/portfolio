@@ -165,6 +165,7 @@ header .groot img {
 }
 .nav .container ul li a {
   background-color: #B5D5C5;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -639,7 +640,7 @@ header .groot img {
     display: grid;
   }
   #about {
-    padding: 2.5rem 0;
+    padding: 1.5rem 0;
   }
   #about .container p {
     text-align: center;
@@ -665,13 +666,13 @@ header .groot img {
     padding: 1rem;
   }
   #skill {
-    padding: 2.5rem 0;
+    padding: 1.5rem 0;
   }
   #skill .container p {
     text-align: center;
   }
   #project {
-    padding: 2.5rem 0;
+    padding: 1.5rem 0;
   }
   #project p {
     text-align: center;
@@ -714,7 +715,7 @@ header .groot img {
     width: 100%;
   }
   #experience {
-    padding: 2.5rem 0;
+    padding: 1.5rem 0;
   }
   #experience .container p.big-text {
     text-align: center;
