@@ -153,10 +153,10 @@ header {
 
 .nav {
     width: 100%;
+    height: calc(3.3rem + 1px);
     position: fixed;
     color: #ffffff;
     bottom: 3.5px;
-    background-color: $bgColor;
     z-index: 999;
 
     .container {
@@ -164,6 +164,7 @@ header {
         justify-content: center;
         align-items: center;
         padding: unset;
+        height: 100%;
 
         h1 {
             line-height: normal;
@@ -175,18 +176,25 @@ header {
 
         ul {
             display: flex;
+            position: relative;
             gap: 1rem;
-            background-color: $bgColor;
-            padding: 1rem 0;
+            height: 100%;
+            // padding: 1rem 0;
 
             li {
                 opacity: 0.7;
                 list-style: none;
 
                 a {
-                    color: unset;
+                    background-color: #B5D5C5;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $bgColor;
                     text-decoration: none;
-                    padding: 1rem;
+                    width: 6rem;
+                    height: 100%;
+                    font-weight: bolder;
 
                     span {
                         display: none;
@@ -739,11 +747,13 @@ header {
                     width: 3.8rem;
 
                     a {
-                        background-color: $bgColor;
+                        // background-color: $bgColor;
                         font-size: 0.75rem;
-                        // padding: 0.3rem 1rem;
                         padding: 0.3rem 0;
                         text-align: center;
+                        display: block;
+                        width: unset;
+                        font-weight: unset;
 
                         span {
                             display: block;
@@ -844,6 +854,7 @@ header {
     #myModal {
         .container {
             width: unset;
+
             .img-content {
                 height: 12rem;
                 margin-top: 3rem;

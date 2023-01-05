@@ -134,10 +134,10 @@ header .groot img {
 
 .nav {
   width: 100%;
+  height: calc(3.3rem + 1px);
   position: fixed;
   color: #ffffff;
   bottom: 3.5px;
-  background-color: rgb(50, 50, 51);
   z-index: 999;
 }
 .nav .container {
@@ -145,6 +145,7 @@ header .groot img {
   justify-content: center;
   align-items: center;
   padding: unset;
+  height: 100%;
 }
 .nav .container h1 {
   line-height: normal;
@@ -154,18 +155,24 @@ header .groot img {
 }
 .nav .container ul {
   display: flex;
+  position: relative;
   gap: 1rem;
-  background-color: rgb(50, 50, 51);
-  padding: 1rem 0;
+  height: 100%;
 }
 .nav .container ul li {
   opacity: 0.7;
   list-style: none;
 }
 .nav .container ul li a {
-  color: unset;
+  background-color: #B5D5C5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(50, 50, 51);
   text-decoration: none;
-  padding: 1rem;
+  width: 6rem;
+  height: 100%;
+  font-weight: bolder;
 }
 .nav .container ul li a span {
   display: none;
@@ -613,10 +620,12 @@ header .groot img {
     width: 3.8rem;
   }
   .nav .container ul li a {
-    background-color: rgb(50, 50, 51);
     font-size: 0.75rem;
     padding: 0.3rem 0;
     text-align: center;
+    display: block;
+    width: unset;
+    font-weight: unset;
   }
   .nav .container ul li a span {
     display: block;
