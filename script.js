@@ -253,18 +253,17 @@ const linkModal = document.querySelector("#myModal a");
 
 for (let i = 0; i < img.length; i++) {
   img[i].addEventListener("click", (e) => {
-    // console.log(e.target.dataset);
     const getUrl = e.target.dataset;
     modal.style.display = "flex";
     modalImg.src = e.target.src;
     captionText.innerHTML = e.target.alt;
     linkModal.href = getUrl.url;
 
-    if (!img[i].getAttribute("data-url")) {
-      linkModal.style.display = "none";
-    } else {
-      linkModal.style.display = "block";
-    }
+    // if (!img[i].getAttribute("data-url")) {
+    //   // linkModal.style.display = "none";
+    // } else {
+    //   linkModal.style.display = "block";
+    // }
   });
 }
 

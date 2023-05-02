@@ -289,6 +289,7 @@ header .groot img {
   overflow: hidden;
   box-shadow: 0 0 5px 1px #838383;
   border-radius: 10px;
+  transition: 0.2s ease-in;
 }
 #project .card-wrapper .card img {
   width: 100%;
@@ -297,9 +298,9 @@ header .groot img {
   position: relative;
   z-index: 20;
 }
-#project .card-wrapper .card img:hover {
-  transform: scale(1.1);
-  opacity: 0;
+#project .card-wrapper .card:hover {
+  transform: translate(2px, -2px);
+  box-shadow: -2px 2px 5px 1px #838383;
 }
 #project .card-wrapper .card .text-behind {
   position: absolute;
@@ -337,8 +338,8 @@ header .groot img {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
 }
 #myModal .container {
   display: block;
@@ -349,11 +350,13 @@ header .groot img {
   width: 100%;
   height: 70%;
   margin-top: 2rem;
+  animation: 0.6s zoom;
 }
 #myModal .container .caption {
   text-align: center;
   color: #ccc;
   padding: 10px 0;
+  animation: 0.6s zoom;
 }
 #myModal .container a {
   color: white;
@@ -365,18 +368,7 @@ header .groot img {
   display: flex;
   justify-content: center;
   width: 6rem;
-}
-#myModal .container .modal-content,
-#myModal .container .caption {
   animation: 0.6s zoom;
-}
-@keyframes zoom {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
 }
 #myModal .container .btnClose {
   position: absolute;
@@ -386,6 +378,7 @@ header .groot img {
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
+  animation: 0.6s zoom;
 }
 #myModal .container .btnClose:hover, #myModal .container .btnClose:focus {
   color: #bbb;
@@ -397,6 +390,7 @@ header .groot img {
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 2rem;
   padding-bottom: 2rem;
+  animation: 0.6s zoom;
 }
 #myModal .container .formWrapper form {
   margin: auto;
@@ -423,6 +417,14 @@ header .groot img {
   border-bottom: 1px solid silver;
   outline: none;
   margin-bottom: 1.5rem;
+}
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 #myModal::-webkit-scrollbar {
   display: none;
