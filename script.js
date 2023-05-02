@@ -63,7 +63,7 @@ var bootstrap = {
     height: 180,
     type: "radialBar",
   },
-  series: [80],
+  series: [85],
   labels: ["Bootstrap"],
 };
 var tailwind = {
@@ -71,7 +71,7 @@ var tailwind = {
     height: 180,
     type: "radialBar",
   },
-  series: [80],
+  series: [85],
   labels: ["Tailwind"],
 };
 var sassScss = {
@@ -87,7 +87,7 @@ var vuejs = {
     height: 180,
     type: "radialBar",
   },
-  series: [30],
+  series: [35],
   labels: ["Vue.js"],
 };
 var reactjs = {
