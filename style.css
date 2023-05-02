@@ -163,7 +163,8 @@ header .groot img {
   opacity: 0.7;
   list-style: none;
 }
-.nav .container ul li a {
+.nav .container ul li .card {
+  cursor: pointer;
   background-color: #B5D5C5;
   border-radius: 5px;
   display: flex;
@@ -175,7 +176,7 @@ header .groot img {
   height: 100%;
   font-weight: bolder;
 }
-.nav .container ul li a span {
+.nav .container ul li .card span {
   display: none;
 }
 .nav .container ul .home-dekstop {
@@ -621,7 +622,7 @@ header .groot img {
     align-items: center;
     width: 3.8rem;
   }
-  .nav .container ul li a {
+  .nav .container ul li .card {
     font-size: 0.75rem;
     padding: 0.3rem 0;
     text-align: center;
@@ -629,7 +630,7 @@ header .groot img {
     width: unset;
     font-weight: unset;
   }
-  .nav .container ul li a span {
+  .nav .container ul li .card span {
     display: block;
     display: flex;
     justify-content: center;

@@ -270,3 +270,15 @@ for (let i = 0; i < img.length; i++) {
 spanX.addEventListener("click", () => {
   modal.style.display = "none";
 });
+
+// anchor scroll
+const smoothScroll = document.querySelectorAll('.card')
+console.log(smoothScroll);
+smoothScroll.forEach((item) => {
+    item.addEventListener('click', (e) => {
+        const newPatch = [];
+        e.preventDefault()
+        const el = document.getElementById(item.getAttribute('data-link'))
+        el.scrollIntoView({ behavior: "smooth", block: "start" })
+    })
+})
