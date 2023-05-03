@@ -259,11 +259,12 @@ for (let i = 0; i < img.length; i++) {
     captionText.innerHTML = e.target.alt;
     linkModal.href = getUrl.url;
 
-    // if (!img[i].getAttribute("data-url")) {
-    //   // linkModal.style.display = "none";
-    // } else {
-    //   linkModal.style.display = "block";
-    // }
+    // logic to visit link
+    if (!img[i].getAttribute("data-url")) {
+      linkModal.style.display = "none";
+    } else {
+      linkModal.style.display = "block";
+    }
   });
 }
 

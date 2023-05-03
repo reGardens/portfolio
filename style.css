@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Futura";
+  src: url(./public/fonts/FuturaStd-Heavy.otf);
+}
+@font-face {
+  font-family: "MyriadPro";
+  src: url(./public/fonts/MyriadPro-Regular.otf);
+}
 * {
   padding: 0;
   margin: 0;
@@ -7,7 +15,7 @@
 
 body {
   overflow-x: hidden;
-  font-family: garamond, sans-serif;
+  font-family: "Futura";
   color: #282828;
 }
 
@@ -25,6 +33,13 @@ body {
   font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
+}
+
+h3 {
+  color: #ffffff;
+  font-weight: lighter;
+  font-size: 0.875rem;
+  font-family: "MyriadPro";
 }
 
 .btn-orange {
@@ -77,16 +92,12 @@ header .desc p:nth-last-child(3) {
   width: 26.5rem;
   padding: 0.5rem;
 }
-header .desc h3 {
-  color: #ffffff;
-  font-weight: lighter;
-  font-size: 0.875rem;
-}
 header .desc .mail {
   display: flex;
   justify-content: space-between;
-  width: 20rem;
+  width: 21rem;
   margin-top: 2rem;
+  gap: 0.5rem;
 }
 header .desc .mail a {
   padding: 0.5rem;
@@ -223,13 +234,15 @@ header .groot img {
   display: flex;
   border-radius: 0 20px 20px 0;
   box-shadow: 0 0 10px 1px rgb(50, 50, 51);
+  text-align: justify;
 }
-#about .container .card .desc p {
+#about .container .card .desc h3 {
   height: unset;
   margin: auto;
   line-height: 1.5rem;
   padding: 2rem;
-  font-weight: bold;
+  font-weight: semibold;
+  letter-spacing: 2px;
 }
 
 #skill {
@@ -349,7 +362,7 @@ header .groot img {
 }
 #myModal .container .img-content {
   width: 100%;
-  height: 70%;
+  min-height: 70%;
   margin-top: 2rem;
   animation: 0.6s zoom;
 }
@@ -435,7 +448,6 @@ header .groot img {
   background-color: rgb(50, 50, 51);
   color: white;
   position: relative;
-  margin-bottom: 0.7rem;
 }
 #experience .container p {
   text-shadow: unset;
@@ -468,17 +480,16 @@ header .groot img {
   font-weight: bold;
   line-height: 1.45rem;
   padding: 10px 20px;
-  min-height: 10rem;
+  min-height: 11rem;
 }
 #experience .container .card-wrapper .card .desc .title {
   font-size: 1.125rem;
   font-weight: bolder;
-}
-#experience .container .card-wrapper .card .desc .opacity {
-  opacity: 0.7;
+  padding: 11px 0;
 }
 #experience .container .card-wrapper .card .desc .date {
   font-size: 0.75rem;
+  padding: 10px 0;
 }
 #experience .container .card-wrapper .card .desc .btn {
   position: absolute;
@@ -656,7 +667,6 @@ header .groot img {
   }
   #about .container .card .img {
     width: 100%;
-    height: 10rem;
     box-shadow: unset;
     border-radius: 10px 10px 0 0;
   }
@@ -664,9 +674,11 @@ header .groot img {
     box-shadow: unset;
     border-radius: 0 0 10px 10px;
   }
-  #about .container .card .desc p {
+  #about .container .card .desc h3 {
     text-align: justify;
     padding: 1rem;
+    letter-spacing: unset;
+    line-height: normal;
   }
   #skill {
     padding: 1.5rem 0;
@@ -704,7 +716,7 @@ header .groot img {
     width: unset;
   }
   #myModal .container .img-content {
-    height: 12rem;
+    min-height: 12rem;
     margin-top: 3rem;
   }
   #myModal .container .caption {
@@ -737,6 +749,7 @@ header .groot img {
   #experience .container .card-wrapper .card .desc {
     padding: 10px;
     line-height: 1.25rem;
+    min-height: 12.5rem;
   }
   #experience .container .card-wrapper .card .desc .title {
     font-size: 1rem;

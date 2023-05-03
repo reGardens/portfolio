@@ -1,6 +1,16 @@
 $bgColor: rgb(50, 50, 51);
-$garamond: garamond, sans-serif;
+// $garamond: garamond, sans-serif;
 $bigFont: 3.5em;
+
+@font-face {
+    font-family: "Futura";
+    src: url(./public/fonts/FuturaStd-Heavy.otf);
+}
+
+@font-face {
+    font-family: "MyriadPro";
+    src: url(./public/fonts/MyriadPro-Regular.otf);
+}
 
 * {
     padding: 0;
@@ -11,7 +21,7 @@ $bigFont: 3.5em;
 
 body {
     overflow-x: hidden;
-    font-family: $garamond;
+    font-family: "Futura";
     color: #282828;
 }
 
@@ -25,10 +35,17 @@ body {
     opacity: 0.6;
 }
 
+// text
 .big-text {
     font-size: 3.5rem;
     font-weight: bold;
     margin-bottom: 2rem;
+}
+h3 {
+    color: #ffffff;
+    font-weight: lighter;
+    font-size: 0.875rem;
+    font-family: "MyriadPro";
 }
 
 .btn-orange {
@@ -85,17 +102,12 @@ header {
             }
         }
 
-        h3 {
-            color: #ffffff;
-            font-weight: lighter;
-            font-size: 0.875rem;
-        }
-
         .mail {
             display: flex;
             justify-content: space-between;
-            width: 20rem;
+            width: 21rem;
             margin-top: 2rem;
+            gap: 0.5rem;
 
             a {
                 padding: 0.5rem;
@@ -254,17 +266,18 @@ header {
 
             .desc {
                 background-color: $bgColor;
-                // color: $bgColor;
                 display: flex;
                 border-radius: 0 20px 20px 0;
                 box-shadow: 0 0 10px 1px $bgColor;
+                text-align: justify;
 
-                p {
+                h3 {
                     height: unset;
                     margin: auto;
                     line-height: 1.50rem;
                     padding: 2rem;
-                    font-weight: bold;
+                    font-weight: semibold;
+                    letter-spacing: 2px;
                 }
             }
         }
@@ -398,8 +411,6 @@ header {
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(8px);
-    // transition: opacity 0.2s 0s ease-in-out,
-    //             transform 0.2s 0s ease-in-out;
 
     .container {
         display: block;
@@ -408,18 +419,18 @@ header {
 
         .img-content {
             width: 100%;
-            height: 70%;
+            min-height: 70%;
             margin-top: 2rem;
             animation: 0.6s zoom;
         }
-        
+
         .caption {
             text-align: center;
             color: #ccc;
             padding: 10px 0;
             animation: 0.6s zoom;
         }
-        
+
         a {
             color: white;
             text-decoration: none;
@@ -432,7 +443,7 @@ header {
             width: 6rem;
             animation: 0.6s zoom;
         }
-        
+
         .btnClose {
             position: absolute;
             top: 35px;
@@ -442,7 +453,7 @@ header {
             font-weight: bold;
             transition: 0.3s;
             animation: 0.6s zoom;
-            
+
             &:hover,
             &:focus {
                 color: #bbb;
@@ -457,7 +468,7 @@ header {
             margin-top: 2rem;
             padding-bottom: 2rem;
             animation: 0.6s zoom;
-            
+
             form {
                 margin: auto;
                 width: 23rem;
@@ -510,7 +521,7 @@ header {
     background-color: $bgColor;
     color: white;
     position: relative;
-    margin-bottom: 0.7rem;
+    // margin-bottom: 0.7rem;
 
     .container {
         p {
@@ -547,19 +558,17 @@ header {
                     font-weight: bold;
                     line-height: 1.45rem;
                     padding: 10px 20px;
-                    min-height: 10rem;
+                    min-height: 11rem;
 
                     .title {
                         font-size: 1.125rem;
                         font-weight: bolder;
-                    }
-
-                    .opacity {
-                        opacity: 0.7;
+                        padding: 11px 0;
                     }
 
                     .date {
                         font-size: 0.75rem;
+                        padding: 10px 0;
                     }
 
                     .btn {
@@ -750,7 +759,7 @@ header {
                     display: grid;
                     align-items: center;
                     width: 3.8rem;
-                    
+
                     .card {
                         font-size: 0.75rem;
                         padding: 0.3rem 0;
@@ -795,7 +804,6 @@ header {
 
                 .img {
                     width: 100%;
-                    height: 10rem;
                     box-shadow: unset;
                     border-radius: 10px 10px 0 0;
                 }
@@ -804,9 +812,11 @@ header {
                     box-shadow: unset;
                     border-radius: 0 0 10px 10px;
 
-                    p {
+                    h3 {
                         text-align: justify;
                         padding: 1rem;
+                        letter-spacing: unset;
+                        line-height: normal;
                     }
                 }
             }
@@ -860,7 +870,7 @@ header {
             width: unset;
 
             .img-content {
-                height: 12rem;
+                min-height: 12rem;
                 margin-top: 3rem;
             }
 
@@ -905,6 +915,7 @@ header {
                     .desc {
                         padding: 10px;
                         line-height: 1.25rem;
+                        min-height: 12.5rem;
 
                         .title {
                             font-size: 1rem;
