@@ -223,10 +223,6 @@ header {
                 display: none;
             }
 
-            li.actived {
-                opacity: 1;
-            }
-
             li.active {
                 opacity: 1;
             }
@@ -331,6 +327,10 @@ header {
             gap: 5px;
             color: white;
             cursor: pointer;
+
+            img {
+                pointer-events: none;
+            }
         }
     }
 

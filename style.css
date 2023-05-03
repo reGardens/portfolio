@@ -196,9 +196,6 @@ header .groot img {
 .nav .container ul .home-mobile {
   display: none;
 }
-.nav .container ul li.actived {
-  opacity: 1;
-}
 .nav .container ul li.active {
   opacity: 1;
 }
@@ -286,6 +283,9 @@ header .groot img {
   gap: 5px;
   color: white;
   cursor: pointer;
+}
+#project ul li img {
+  pointer-events: none;
 }
 #project .card-wrapper {
   margin-top: 1.4em;

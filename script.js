@@ -220,15 +220,15 @@ for (let i = 0; i < list.length; i++) {
   list[i].addEventListener("click", (e) => {
     // console.log("ok");
     for (let j = 0; j < list.length; j++) {
-      list[j].classList.remove("active");
+      list[j].classList.remove("actived");
     }
 
-    e.target.classList.add("active");
+    e.target.classList.add("actived");
 
     const dataFilter = e.target.getAttribute("data-filter");
 
     for (let k = 0; k < card.length; k++) {
-      card[k].classList.remove("active");
+      card[k].classList.remove("actived");
       card[k].classList.add("hide");
 
       if (
@@ -236,7 +236,7 @@ for (let i = 0; i < list.length; i++) {
         dataFilter == "all"
       ) {
         card[k].classList.remove("hide");
-        card[k].classList.add("active");
+        card[k].classList.add("actived");
       }
     }
   });
@@ -273,13 +273,13 @@ spanX.addEventListener("click", () => {
 });
 
 // anchor scroll
-const smoothScroll = document.querySelectorAll('.card')
+const smoothScroll = document.querySelectorAll(".card");
 console.log(smoothScroll);
 smoothScroll.forEach((item) => {
-    item.addEventListener('click', (e) => {
-        const newPatch = [];
-        e.preventDefault()
-        const el = document.getElementById(item.getAttribute('data-link'))
-        el.scrollIntoView({ behavior: "smooth", block: "start" })
-    })
-})
+  item.addEventListener("click", (e) => {
+    const newPatch = [];
+    e.preventDefault();
+    const el = document.getElementById(item.getAttribute("data-link"));
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+});
