@@ -677,8 +677,8 @@ header .groot img {
   #about .container .card .desc h3 {
     text-align: justify;
     padding: 1rem;
-    letter-spacing: unset;
-    line-height: normal;
+    font-weight: bold;
+    letter-spacing: 1px;
   }
   #skill {
     padding: 1.5rem 0;
