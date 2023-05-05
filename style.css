@@ -301,9 +301,10 @@ header .groot img {
   width: 16.4em;
   height: 9em;
   overflow: hidden !important;
-  box-shadow: 0 0 5px 1px #838383;
+  box-shadow: 0 5px 10px 1px #b15900;
   border-radius: 10px;
   transition: 0.2s ease-in;
+  overflow-wrap: anywhere;
 }
 #project .card-wrapper .card:hover .image {
   transform: scale(1.2);
@@ -743,11 +744,21 @@ header .groot img {
     border-radius: 5px;
     box-shadow: unset;
   }
+  #project .card-wrapper .card:hover .text-behind {
+    transform: translateY(0);
+  }
   #project .card-wrapper .card .text-behind {
     padding: 5px;
     font-size: 0.875rem;
     width: 100%;
-    height: 100%;
+    text-align: left;
+    margin-bottom: unset;
+    overflow: auto;
+    transition: 0.2s ease all;
+    transform: translateY(100%);
+  }
+  #project .card-wrapper .card .icon-absolute-text {
+    display: none;
   }
   #myModal .container {
     width: unset;

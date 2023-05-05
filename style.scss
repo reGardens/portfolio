@@ -349,11 +349,12 @@ header {
             width: 16.4em;
             height: 9em;
             overflow: hidden !important;
-            box-shadow: 0 0 5px 1px #838383;
+            box-shadow: 0 5px 10px 1px #b15900;
             border-radius: 10px;
             transition: 0.2s ease-in;
+            overflow-wrap: anywhere;
 
-            // transition button clicl
+            // transition button click
             &:hover {
                 .image {
                     transform: scale(1.2);
@@ -898,11 +899,26 @@ header {
                 border-radius: 5px;
                 box-shadow: unset;
 
+                // transition button click
+                &:hover {
+                    .text-behind {
+                        transform: translateY(0);
+                    }
+                }
+
                 .text-behind {
                     padding: 5px;
                     font-size: 0.875rem;
                     width: 100%;
-                    height: 100%;
+                    text-align: left;
+                    margin-bottom: unset;
+                    overflow: auto;
+                    transition: 0.2s ease all;
+                    transform: translateY(100%);
+                }
+
+                .icon-absolute-text {
+                    display: none;
                 }
             }
         }
