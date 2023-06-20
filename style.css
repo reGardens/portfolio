@@ -14,7 +14,7 @@
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   font-family: "Futura";
   color: #282828;
 }
@@ -55,51 +55,60 @@ h3 {
 
 header {
   height: 35rem;
-  position: relative;
   overflow-y: hidden;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   background-color: rgb(50, 50, 51);
   margin-bottom: 0.7rem;
 }
-header .gw {
+header .container-custom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1536px;
+  position: relative;
+  margin-bottom: 0.7rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+header .container-custom .gw {
   background-color: #FF7F00;
   transition: 0.5s ease-in-out;
   width: 50rem;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
-header .gw img {
+header .container-custom .gw img {
   width: 29rem;
-}
-header .desc {
+  z-index: 999;
   position: absolute;
-  top: 20%;
+}
+header .container-custom .desc {
+  position: absolute;
+  top: 10%;
   width: 100%;
   z-index: 20;
   display: grid;
   justify-content: center;
   gap: 0.8rem;
 }
-header .desc p {
+header .container-custom .desc p {
   color: #ffffff;
   font-size: 2.25rem;
   font-weight: bold;
 }
-header .desc p:nth-last-child(3) {
+header .container-custom .desc p:nth-last-child(3) {
   background-color: rgb(50, 50, 51);
   color: #FF7F00;
   width: 26.5rem;
   padding: 0.5rem;
 }
-header .desc .mail {
+header .container-custom .desc .mail {
   display: flex;
   justify-content: space-between;
   width: 21rem;
   margin-top: 2rem;
   gap: 0.5rem;
 }
-header .desc .mail a {
+header .container-custom .desc .mail a {
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -108,7 +117,7 @@ header .desc .mail a {
   cursor: pointer;
   background-color: rgb(50, 50, 51);
 }
-header .desc .mail a:nth-last-child(1) {
+header .container-custom .desc .mail a:nth-last-child(1) {
   border: 1px solid #FF7F00;
   font-weight: bolder;
   background-color: #ffffff;
@@ -125,18 +134,17 @@ header .desc .mail a:nth-last-child(1) {
     transform: translateY(0px);
   }
 }
-header .desc .mail a:nth-last-child(1) h3 {
+header .container-custom .desc .mail a:nth-last-child(1) h3 {
   font-weight: 900;
   color: #FF7F00;
 }
-header .groot {
+header .container-custom .groot {
   background-color: rgb(50, 50, 51);
   display: flex;
   justify-content: end;
 }
-header .groot img {
+header .container-custom .groot img {
   width: 30rem;
-  transform: scaleX(-1);
 }
 
 .header-mobile {

@@ -181,37 +181,6 @@ git.render();
 //     // alert('ok')
 // })
 
-// scrolling images
-// window.addEventListener("scroll", () => {
-//   const header = document.querySelector(".header");
-//   const hKanan = document.querySelector(".hutan-kanan");
-//   const hKiri = document.querySelector(".hutan-kiri");
-//   const wrapDesc = document.querySelector(".wrap-desc");
-//   // const thumbImg = document.querySelector('.about .wrapper .thumb-img')
-//   // const desc = document.querySelector('.about .wrapper .desc')
-
-//   const valueY = window.scrollY;
-
-//   // sticky header
-//   header.classList.toggle("wrapperSticky", valueY);
-
-//   // if (valueY >= 174) {
-//   //     // thumbImg.classList.toggle('active')
-//   //     // thumbImg.style.opacity = 1
-//   //     desc.style.opacity = 1
-//   // }
-//   // if (valueY <= 174) {
-//   //     // thumbImg.classList.toggle('active')
-//   //     thumbImg.style.opacity = 0
-//   //     desc.style.opacity = 0
-//   // }
-
-//   // handler images
-//   hKanan.style.bottom = valueY * -0.2 + "px";
-//   hKiri.style.bottom = valueY * -0.1 + "px";
-//   wrapDesc.style.top = valueY * 0.1 + "px";
-// });
-
 // filter galery images
 const list = document.querySelectorAll(".list");
 const card = document.querySelectorAll(".card");

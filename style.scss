@@ -20,7 +20,7 @@ $bigFont: 3.5em;
 }
 
 body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     font-family: "Futura";
     color: #282828;
 }
@@ -62,100 +62,110 @@ h3 {
 
 header {
     height: 35rem;
-    position: relative;
     overflow-y: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     background-color: $bgColor;
     margin-bottom: 0.7rem;
 
-    .gw {
-        background-color: #FF7F00;
-        transition: 0.5s ease-in-out;
-        width: 50rem;
-        display: flex;
-        justify-content: space-between;
-
-        img {
-            width: 29rem;
-        }
-    }
-
-    .desc {
-        position: absolute;
-        top: 20%;
-        width: 100%;
-        z-index: 20;
+    .container-custom {
         display: grid;
-        justify-content: center;
-        gap: 0.8rem;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1536px;
+        position: relative;
+        margin-bottom: 0.7rem;
+        margin: 0 auto;
+        overflow: hidden;
 
-        p {
-            color: #ffffff;
-            font-size: 2.25rem;
-            font-weight: bold;
+        .gw {
+            background-color: #FF7F00;
+            transition: 0.5s ease-in-out;
+            width: 50rem;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
 
-            &:nth-last-child(3) {
-                background-color: $bgColor;
-                color: #FF7F00;
-                width: 26.5rem;
-                padding: 0.5rem;
+            img {
+                width: 29rem;
+                z-index: 999;
+                position: absolute;
             }
         }
 
-        .mail {
-            display: flex;
-            justify-content: space-between;
-            width: 21rem;
-            margin-top: 2rem;
-            gap: 0.5rem;
+        .desc {
+            position: absolute;
+            top: 10%;
+            width: 100%;
+            z-index: 20;
+            display: grid;
+            justify-content: center;
+            gap: 0.8rem;
 
-            a {
-                padding: 0.5rem;
+            p {
+                color: #ffffff;
+                font-size: 2.25rem;
+                font-weight: bold;
+
+                &:nth-last-child(3) {
+                    background-color: $bgColor;
+                    color: #FF7F00;
+                    width: 26.5rem;
+                    padding: 0.5rem;
+                }
+            }
+
+            .mail {
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
-                text-decoration: none;
-                cursor: pointer;
-                background-color: $bgColor;
+                justify-content: space-between;
+                width: 21rem;
+                margin-top: 2rem;
+                gap: 0.5rem;
 
-                &:nth-last-child(1) {
-                    border: 1px solid #FF7F00;
-                    font-weight: bolder;
-                    background-color: #ffffff;
-                    animation: btnDownload 1.5s infinite;
+                a {
+                    padding: 0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-decoration: none;
+                    cursor: pointer;
+                    background-color: $bgColor;
 
-                    @keyframes btnDownload {
-                        0% {
-                            transform: translateY(0px);
+                    &:nth-last-child(1) {
+                        border: 1px solid #FF7F00;
+                        font-weight: bolder;
+                        background-color: #ffffff;
+                        animation: btnDownload 1.5s infinite;
+
+                        @keyframes btnDownload {
+                            0% {
+                                transform: translateY(0px);
+                            }
+
+                            50% {
+                                transform: translateY(-10px);
+                            }
+
+                            100% {
+                                transform: translateY(0px);
+                            }
                         }
 
-                        50% {
-                            transform: translateY(-10px);
+                        h3 {
+                            font-weight: 900;
+                            color: #FF7F00;
                         }
-
-                        100% {
-                            transform: translateY(0px);
-                        }
-                    }
-
-                    h3 {
-                        font-weight: 900;
-                        color: #FF7F00;
                     }
                 }
             }
         }
-    }
 
-    .groot {
-        background-color: $bgColor;
-        display: flex;
-        justify-content: end;
+        .groot {
+            background-color: $bgColor;
+            display: flex;
+            justify-content: end;
 
-        img {
-            width: 30rem;
-            transform: scaleX(-1);
+            img {
+                width: 30rem;
+                // transform: scaleX(-1);
+            }
         }
     }
 }

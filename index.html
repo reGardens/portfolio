@@ -9,47 +9,49 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="/node_modules/animejs/lib/anime.min.js"></script>
 </head>
 
 <body>
-  <!-- banner dekstop -->
+  <!-- s banner dekstop -->
   <header id="home">
-    <!-- <img class="banner-img" src="./img/banner.png" alt="" /> -->
-    <div class="gw">
-      <img src="/publics/images/gw.webp" alt="" />
-    </div>
+    <div class="container-custom">
+      <div class="gw lax lax_preset_slideX:100:0">
+        <img src="/publics/images/gw.webp" alt="" />
+      </div>
 
-    <div class="desc">
-      <p>Hi, I'm Reza Bagus Pratama</p>
+      <div class="desc">
+        <p>Hi, I'm Reza Bagus Pratama</p>
 
-      <p class="frontEnd">Front-End Web Developer</p>
+        <p class="frontEnd">Front-End Web Developer</p>
 
-      <h3 class="opacity">
-        As a web developer, I am also a competitive programmer and tech <br> enthusiast.
-      </h3>
+        <h3 class="opacity">
+          As a web developer, I am also a competitive programmer and tech <br> enthusiast.
+        </h3>
 
-      <div class="mail">
-        <a class="">
-          <h3>Email:</h3>
-          <h3 class="opacity">Rezzabagus.rb@gmail.com</h3>
-        </a>
+        <div class="mail">
+          <a class="">
+            <h3>Email:</h3>
+            <h3 class="opacity">Rezzabagus.rb@gmail.com</h3>
+          </a>
 
-        <a href="https://drive.google.com/uc?export=download&id=1b6aiPsC2rgC1b9dSGY4WhGiZDzmlxlIK">
-          <h3>Download My Resume</h3>
-        </a>
+          <a href="https://drive.google.com/uc?export=download&id=1b6aiPsC2rgC1b9dSGY4WhGiZDzmlxlIK">
+            <h3>Download My Resume</h3>
+          </a>
+        </div>
+      </div>
+
+      <div class="groot">
+        <img src="/publics/images/groot.webp" alt="" />
       </div>
     </div>
-
-    <div class="groot">
-      <img src="/publics/images/groot.webp" alt="" />
-    </div>
   </header>
-  <!-- banner dekstop -->
+  <!-- e banner dekstop -->
 
-  <!-- banner mobile -->
+  <!-- s banner mobile -->
   <div class="header-mobile" id="home-mobile">
     <img class="gw" src="/publics/images/gw.webp" alt="" />
-    <img class="groot" src="/publics/images/groot.webp" alt="" />
+    <img class="groot" src="/publics/images/grootMobile.webp" alt="" />
 
     <div class="desc">
       <h2>Hi, I'm Reza Bagus Pratama</h2>
@@ -687,6 +689,9 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="animation-custom.js"></script>
+  <script src="./publics/js/parallaxEffect.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
 </body>
 
 </html>
