@@ -80,6 +80,7 @@ header .container-custom .gw img {
   width: 29rem;
   z-index: 999;
   position: absolute;
+  perspective: 1px;
 }
 header .container-custom .desc {
   position: absolute;

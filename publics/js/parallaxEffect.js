@@ -1,23 +1,4 @@
-var scrollStep = 5; // Adjust the scroll step (lower value for slower scrolling)
-var isScrolling = false; // Variable to track if scrolling is in progress
-
-function scrollPage(amount) {
-    if (!isScrolling) {
-        isScrolling = true;
-        var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-        var targetPosition = scrollPosition + amount;
-
-        window.scrollTo(0, targetPosition);
-
-        isScrolling = false;
-    }
-}
-
-window.addEventListener("wheel", () => {
-    event.preventDefault();
-    var delta = event.deltaY || event.detail || (-1 * event.wheelDelta);
-    scrollPage(delta * scrollStep);
-
+window.addEventListener("scroll", () => {
     const containerCustomBanner = document.querySelector("header .container-custom"),
         bgImgGwDekstop = document.querySelector("header .gw"),
         imgGwDekstop = document.querySelector("header .gw img"),
