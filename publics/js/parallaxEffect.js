@@ -19,7 +19,7 @@ window.addEventListener("scroll", () => {
 
     if (scrollY > 0) {
         imgGwDekstop.style.transform = 'translateY(' + (-scrollY * parallaxSpeedY) + 'px)';
-        imgGrootDekstop.style.transform = 'translateY(' + (scrollY * 1) + 'px)';
+        imgGrootDekstop.style.transform = 'translateY(' + (scrollY * 1.1) + 'px)';
         bannerDesc.style.transform = 'translateY(' + (scrollY * parallaxSpeedY) + 'px)';
     } else {
         imgGwDekstop.style.transform = 'translateX(0)';

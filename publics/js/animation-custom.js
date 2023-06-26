@@ -54,12 +54,20 @@ anime({
 });
 
 const mobileDesc = document.querySelector('.header-mobile .desc')
+const mobileDescEmail = document.querySelector('.header-mobile .desc .mail')
 anime({
   targets: mobileDesc,
   translateY: [-250, 0],
   opacity: [0, 1],
   easing: "easeInOutSine",
   duration: 900
+});
+anime({
+  targets: mobileDescEmail,
+  translateY: [-250, 0],
+  opacity: [0, 1],
+  easing: "easeInOutSine",
+  duration: 1200
 });
 // s Banner Mobile
 
